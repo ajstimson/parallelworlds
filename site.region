@@ -1,23 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
 
-    <!-- include system scripts, page meta, and header code injection -->
-    {squarespace-headers}
-  </head>
-  <body>
-  <script>
-    console.log({@|json})
-  </script>
+        <!-- include system scripts, page meta, and header code injection -->
+        {squarespace-headers}
+    </head>
+    <body>
+        <main>
+            <section class="flex column asym-holder">
+                <section class="flex asym-column sixth-column">
+                    <section class="flex column stack">
+                        <section class="flex">
+                            <section class="asym-left star-fraction">
+                                <div class="store-details surface-detail"></div>
+                            </section>
+                            <section class="asym-between stone-canal">
+                                <div class="flex right">
+                                    <h1 class="title">
+                                        parallel
+                                        <span class="hidden">worlds</span>
+                                    </h1>
+                                </div>
+                            </section>
+                            <section class="asym-right cassini-division">
+                                <div class="flex left">
+                                    <h2 class="title">worlds</h2>
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                    <section class="flex stack">
+                        <section class="asym-left star-fraction">
+                            <div class="store-details surface-detail"></div>
+                        </section>
+                        <section class="asym-between stone-canal">
+                            <div class="flex right">
+                                <p>Science Fiction</p>
+                            </div>
+                        </section>
+                        <section class="asym-right cassini-division">
+                            <div class="flex left">
+                                <p>Fantasy Bookshop</p>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </main>
 
-  {.section website}
-  <a href={primaryDomain}>
-    <img src = "./assets/logo.svg" alt="Parallel Worlds Bookshop Logo"/>
-  </a>
-  <h1>{siteTagLine}</h1>
-  {.end}
-  
-  </body>
+        {.section website}
+        <h1>{siteTagLine}</h1>
+        {.end}
+    </body>
 </html>

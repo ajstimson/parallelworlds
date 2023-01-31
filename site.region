@@ -12,49 +12,74 @@
     </head>
     <body>
         <main>
-            <section class="flex column asym-holder">
+            <section class="flex column asym-holder autonomous">
+                <section class="store-details absolute">
+                    <div class="flex space-between">
+                        <div>
+                            <h3>Address</h3>
+                            <!-- TODO: wrap with google maps link -->
+                            <p>
+                                2369 NE Alberta Street<br />
+                                Portland, OR 97211
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Open</h3>
+                            <p>
+                                Wednesdays - Saturdays<br />
+                                12pm - 6pm
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Contact</h3>
+                            <!-- wrap with tel href -->
+                            <p><a href="tel:+15037890381">(503) 789-0381</a></p>
+                        </div>
+                    </div>
+                </section>
                 <section class="flex asym-column sixth-column">
-                    <section class="flex column stack">
-                        <section class="flex">
-                            <section class="asym-left star-fraction">
-                                <div class="store-details surface-detail"></div>
-                            </section>
+                    <section class="flex column stack the-municipalists">
+                        <section class="flex revelation-space">
+                            <div class="astronaut absolute the-martian"></div>
+                            <div
+                                class="dragon absolute stranger-in-a-strange-land"
+                            ></div>
+                            <div class="circle absolute accelerando"></div>
+                            <section class="asym-left star-fraction"></section>
                             <section class="asym-between stone-canal">
-                                <div class="flex right">
-                                    <h1 class="title">
+                                <div class="flex right neuromancer">
+                                    <h1 class="title count-zero">
                                         parallel
-                                        <span class="hidden">worlds</span>
+                                        <span class="hidden mona-lisa-overdrive"
+                                            >worlds</span
+                                        >
                                     </h1>
                                 </div>
                             </section>
                             <section class="asym-right cassini-division">
-                                <div class="flex left">
-                                    <h2 class="title">worlds</h2>
+                                <div class="flex left consider-phelbas">
+                                    <h2 class="title contact">worlds</h2>
                                 </div>
                             </section>
                         </section>
                     </section>
-                    <section class="flex stack">
-                        <section class="asym-left star-fraction">
-                            <div class="store-details surface-detail"></div>
+                    <section class="flex stack desolation-called-peace">
+                        <section class="asym-left diaspora">
+                            <div class="store-details diamond-age"></div>
                         </section>
-                        <section class="asym-between stone-canal">
-                            <div class="flex right">
-                                <p>Science Fiction</p>
+                        <section class="asym-between distress">
+                            <div class="flex right red-mars">
+                                <p class="dune">Science Fiction</p>
                             </div>
                         </section>
-                        <section class="asym-right cassini-division">
-                            <div class="flex left">
-                                <p>Fantasy Bookshop</p>
+                        <section class="asym-right quarantine">
+                            <div class="flex left shaman">
+                                <p class="children-of-time">Fantasy Bookshop</p>
                             </div>
                         </section>
                     </section>
                 </section>
             </section>
         </main>
-
-        {.section website}
-        <h1>{siteTagLine}</h1>
-        {.end}
     </body>
 </html>

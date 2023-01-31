@@ -8,10 +8,33 @@
     src: url("../assets/fonts/bb.woff2") format("woff2"),
         url("../assets/fonts/bb.woff") format("woff");
 }
+
+// Import Lato Regular and Lato Black local woff2 files
+@font-face {
+    font-family: "Lato";
+    src: url("../assets/fonts/lato-regular.woff2") format("woff2"),
+        url("../assets/fonts/lato-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../assets/fonts/lato-black.woff2") format("woff2"),
+        url("../assets/fonts/lato-black.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Color pallet
+@color1: #b4d0e7;
+@color2: #351b25;
+@color3: #cf6990;
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Epilogue", "Segoe UI",
-        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Lato", "Epilogue",
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 100%;
     font-weight: normal;
 }
@@ -27,7 +50,68 @@ h6 {
 }
 
 p {
-    font-family: Epilogue, sans-serif;
+    font-family: Lato, sans-serif;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.circle {
+    background: linear-gradient(90deg, @color1 51.2%, @color2 51.2%);
+    height: 650px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 650px;
+    z-index: 0;
+}
+
+.circle.absolute {
+    position: absolute;
+    top: 68%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.astronaut {
+    background: url(/assets/astronaut.png);
+    top: -100%;
+    width: 200px;
+    height: 200px;
+    left: 43%;
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.dragon {
+    background: url(/assets/dragon.png);
+    bottom: -24em;
+    width: 200px;
+    height: 200px;
+    left: 79em;
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 3;
 }
 
 .hidden {
@@ -55,6 +139,18 @@ p {
     justify-content: left;
 }
 
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.space-around {
+    justify-content: space-around;
+}
+
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
+
 /* Homepage
 ***************************************************/
 html {
@@ -77,12 +173,12 @@ h2.title {
 
 h1.title,
 .asym-between p {
-    color: #b4d0e7;
+    color: @color2;
 }
 
 h2.title,
 .asym-right p {
-    color: #1b2735;
+    color: @color1;
 }
 
 main {
@@ -100,7 +196,7 @@ main {
     align-content: center;
     align-items: stretch;
     align-self: center;
-    background: linear-gradient(90deg, #1b2735 66.666%, #b4d0e7 33.334%);
+    background: linear-gradient(90deg, @color2 66.666%, @color1 33.334%);
 }
 
 .asym-column {
@@ -127,7 +223,7 @@ main {
     align-items: center;
     -ms-flex-item-align: center;
     align-self: center;
-    background: linear-gradient(90deg, #1b2735 66.666%, #b4d0e7 33.334%);
+    background: linear-gradient(90deg, @color2 66.666%, @color1 33.334%);
     padding-top: 200px;
     padding-bottom: 200px;
     -webkit-box-pack: start;
@@ -163,12 +259,63 @@ main {
     padding-left: 15px;
 }
 
+.asym-left,
+.asym-between,
+.asym-right {
+    z-index: 1;
+}
+
 .asym-column p {
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 0.25em;
     margin-bottom: 0;
     font-weight: bold;
+    margin-top: 0;
 }
+.store-details {
+    top: 85%;
+    width: 49%;
+    padding-left: 2.5%;
+}
+.store-details h3 {
+    font-family: Lato, sans-serif;
+    color: @color3;
+    font-size: 1.5em;
+    line-height: 0.25em;
+    margin-bottom: 0;
+    font-weight: normal;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.store-details a {
+    font-family: Lato, sans-serif;
+    color: @color1;
+    text-decoration: none;
+}
+
+.store-details p {
+    font-family: Lato, sans-serif;
+    color: @color1;
+    font-size: 1.5em;
+}
+
+// .store-details p::after {
+//     content: attr(data-text);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     /* Change the position of transformed element */
+//     transform-origin: bottom;
+//     /*  Rotates around x-axis */
+//     transform: rotateX(180deg);
+//     line-height: 0.85em;
+//     /* linear-gradient defined by up,down,left ,right ,diagonal */
+//     background-image: linear-gradient(0deg, #ffffff 0, transparent 95%);
+//     -webkit-background-clip: text;
+//     color: transparent;
+//     opacity: 0.7;
+// }
 
 /* Break grid and stack blocks on small screens
 ***************************************************/
